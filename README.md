@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Arproxy 設定
 
-Things you may want to cover:
+read, writing の表示をしたい時はコメントアウトを外す
 
-* Ruby version
+- config/application.rb
+- config/initializers/arproxy.rb
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
