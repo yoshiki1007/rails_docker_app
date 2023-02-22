@@ -2,28 +2,22 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
-default_conf: &default_conf
-  host: user_db
+  host: primary_db
   username: root
   password: password
 
 development:
-  user:
+  primary:
     <<: *default
-    <<: *default_conf
-    database: rails_docker_app_user_development
-    migrations_paths: db/user_migrate
-  user_replica:
+    database: rails_docker_app_primary_development
+  primary_replica:
     <<: *default
-    <<: *default_conf
-    database: rails_docker_app_user_development
+    database: rails_docker_app_primary_development
     replica: true
 
 test:
   <<: *default
-  <<: *default_conf
-  database: rails_docker_app_test
+  database: rails_docker_app_primary_test
 
 production:
   <<: *default
