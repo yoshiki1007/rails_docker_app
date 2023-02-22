@@ -15,9 +15,11 @@ gem "bootsnap", require: false
 
 # ADD
 gem 'devise'
+gem "arproxy"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'pry-rails'
 end
 
 group :development do
